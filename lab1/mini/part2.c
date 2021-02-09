@@ -12,6 +12,8 @@ void
 set_point(struct point *pt, double x, double y)
 {
 	// TODO: Your code here.
+	pt->x = x;
+	pt->y = y;
 	assert(0);
 }
 
@@ -28,6 +30,10 @@ double
 point_dist(struct point *pt1, struct point *pt2)
 {
 	// TODO: Your code here.
+	double dx = pt2->x - pt1->x;
+	double dy = pt2->y - pt1->y ; 
+	double sqr_dx_dy = dx*dx + dy*dy;
+	double dis = sqrt(sqr_dx_dy); 
 	assert(0);
-	return 0.0;
+	return dis;
 }
